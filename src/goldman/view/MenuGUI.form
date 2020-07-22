@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="goldman.view.MenuGUI">
+  <grid id="cbd77" binding="contentPane" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="10" left="10" bottom="10" right="10"/>
+    <constraints>
+      <xy x="48" y="54" width="436" height="315"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="2fa89" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="1" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <vspacer id="3a44f">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="f615f">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <component id="6d599" class="javax.swing.JButton" binding="button_start">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="200" height="60"/>
+                <maximum-size width="300" height="90"/>
+              </grid>
+            </constraints>
+            <properties>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="true"/>
+              <defaultCapable value="true"/>
+              <focusPainted value="false"/>
+              <font size="22"/>
+              <horizontalAlignment value="2"/>
+              <horizontalTextPosition value="11"/>
+              <icon value="goldman/assets/dialog_icons/newgame.png"/>
+              <iconTextGap value="10"/>
+              <margin top="0" left="10" bottom="0" right="10"/>
+              <opaque value="false"/>
+              <text value="Start Game"/>
+              <verticalAlignment value="0"/>
+              <verticalTextPosition value="0"/>
+              <visible value="true"/>
+            </properties>
+          </component>
+          <component id="36747" class="javax.swing.JButton" binding="button_quit">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="200" height="60"/>
+                <maximum-size width="300" height="90"/>
+              </grid>
+            </constraints>
+            <properties>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="true"/>
+              <defaultCapable value="true"/>
+              <focusPainted value="false"/>
+              <font size="22"/>
+              <horizontalAlignment value="2"/>
+              <horizontalTextPosition value="11"/>
+              <icon value="goldman/assets/dialog_icons/exit.png"/>
+              <iconTextGap value="10"/>
+              <label value="Quit"/>
+              <margin top="0" left="10" bottom="0" right="10"/>
+              <opaque value="false"/>
+              <text value="Quit"/>
+              <verticalAlignment value="0"/>
+              <verticalTextPosition value="0"/>
+              <visible value="true"/>
+            </properties>
+          </component>
+          <component id="37225" class="javax.swing.JButton" binding="button_load">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="200" height="60"/>
+                <maximum-size width="300" height="90"/>
+              </grid>
+            </constraints>
+            <properties>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="true"/>
+              <focusPainted value="false"/>
+              <font size="22"/>
+              <horizontalAlignment value="2"/>
+              <icon value="goldman/assets/dialog_icons/load.png"/>
+              <iconTextGap value="10"/>
+              <margin top="0" left="10" bottom="0" right="10"/>
+              <opaque value="false"/>
+              <selected value="false"/>
+              <text value="Load Game"/>
+            </properties>
+          </component>
+          <component id="68e17" class="javax.swing.JButton" binding="button_records">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="200" height="60"/>
+                <maximum-size width="300" height="90"/>
+              </grid>
+            </constraints>
+            <properties>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="true"/>
+              <focusPainted value="false"/>
+              <font size="22"/>
+              <horizontalAlignment value="2"/>
+              <horizontalTextPosition value="11"/>
+              <icon value="goldman/assets/dialog_icons/records.png"/>
+              <iconTextGap value="10"/>
+              <margin top="0" left="10" bottom="0" right="10"/>
+              <opaque value="false"/>
+              <text value="Records"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <hspacer id="2a8c6">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="3685a">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+    </children>
+  </grid>
+</form>
