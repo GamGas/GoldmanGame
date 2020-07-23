@@ -1,6 +1,9 @@
 package goldman.view;
 
+import goldman.controller.ActionListeners;
+
 import javax.swing.*;
+import java.awt.event.ActionListener;
 
 public class MenuGUI extends JFrame {
     private JPanel contentPane;
@@ -8,6 +11,9 @@ public class MenuGUI extends JFrame {
     private JButton button_quit;
     private JButton button_load;
     private JButton button_records;
+
+
+    ActionListener listener = new ActionListeners.QuitAction();
 
     /**
      * Параметры JButton заданы в одноименном файле с расширением .form
@@ -21,6 +27,7 @@ public class MenuGUI extends JFrame {
         setResizable(false);                     // Запрещает изменять размер окна
         pack();                                  // Устанавливает размер окна достаточный для всех компонентов
         setLocationRelativeTo(null);             // Устанавливает положение окна по центру экрана
+        button_quit.addActionListener(listener);
     }
 
     /**
@@ -28,8 +35,7 @@ public class MenuGUI extends JFrame {
      * не обязательно, все нужные настройки можно прописать в конструкторе.
     * */
 
-    public static void main(String[] args) {
-        MenuGUI gui = new MenuGUI();
-        gui.setVisible(true);
-    }
+
+
+
 }
