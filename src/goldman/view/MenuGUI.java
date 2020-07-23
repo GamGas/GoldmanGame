@@ -5,6 +5,7 @@ import goldman.controller.GuiHandler;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class MenuGUI extends JFrame {
     private JPanel contentPane;
@@ -29,7 +30,13 @@ public class MenuGUI extends JFrame {
         setLocationRelativeTo(null);             // Устанавливает положение окна по центру экрана
         // Устанавливает действие на кнопку выхода
         button_quit.addActionListener(e -> System.exit(0));
-        button_start.addActionListener(e -> GuiHandler.getInstance().displayGameMenu(this));
+        button_start.addActionListener(e -> {
+            try {
+                GuiHandler.getInstance().displayGameMenu(this);
+            } catch (IOException ioException) {
+                System.out.println("GuiHandler.getInstance().displayGameMenu(this); не сработал");
+            }
+        });
     }
 
     /**

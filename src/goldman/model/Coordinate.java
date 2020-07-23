@@ -28,8 +28,6 @@ public class Coordinate {
 
     @Override
     public String toString() {
-        return "Coordinate{" +
-                "item=" + item +
-                '}';
+        return ""+item+"," ;
     }
 }

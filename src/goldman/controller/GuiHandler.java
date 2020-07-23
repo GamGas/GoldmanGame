@@ -4,6 +4,7 @@ import goldman.view.GameGUI;
 import goldman.view.MenuGUI;
 
 import javax.swing.*;
+import java.io.IOException;
 
 public class GuiHandler {
 
@@ -22,7 +23,7 @@ public class GuiHandler {
     }
 
 
-    public void displayGameMenu(JFrame previousGui){
+    public void displayGameMenu(JFrame previousGui) throws IOException {
         if(gameGui == null)
             gameGui = new GameGUI();
         previousGui.setVisible(false);
