@@ -42,7 +42,6 @@ public class GuiHandler {
     public void displayMainMenu(JFrame previousGui){
         if(menuGui == null)
             menuGui = new MenuGUI();
-        previousGui.setVisible(false);
         previousGui.dispose();
         menuGui.setVisible(true);
     }

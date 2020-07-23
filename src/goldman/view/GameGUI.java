@@ -32,11 +32,6 @@ public class GameGUI extends JFrame {
     }
 
 
-    public static void main(String[] args) {
-        GameGUI dialog = new GameGUI();
-        dialog.setVisible(true);
-    }
-
     private void createUIComponents() {
         // TODO: place custom component creation code here
         game_area = new JTable(12 ,11);
