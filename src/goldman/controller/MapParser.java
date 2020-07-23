@@ -18,12 +18,12 @@ public class MapParser {
     }
 
     public Coordinate[][] parseMap() throws IOException {
-        ArrayList <String[]> nonParsedCoordinates = new ArrayList();
+        ArrayList<String[]> nonParsedCoordinates = new ArrayList<>();
         String[] rowsArray;
         int rowsCounter = 0,
                 colsCounter = 0;
 
-        while (bufferedReader.ready()){
+        while (bufferedReader.ready()) {
             rowsArray = bufferedReader.readLine().split(",");
             colsCounter = rowsArray.length;
             nonParsedCoordinates.add(rowsArray);

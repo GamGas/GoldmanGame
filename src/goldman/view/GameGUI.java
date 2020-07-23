@@ -25,33 +25,30 @@ public class GameGUI extends JFrame {
     private JLabel counter_steps;
     private JPanel tablePane;
 
-    static class ImageRenderer extends DefaultTableCellRenderer{
+    static class ImageRenderer extends DefaultTableCellRenderer {
         JLabel lbl = new JLabel();
+
         public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
-            lbl.setIcon((ImageIcon)value);
+            lbl.setIcon((ImageIcon) value);
             lbl.setOpaque(true);
-            lbl.setBackground(new Color(0, 0,0, 129));
+            lbl.setBackground(new Color(0, 0, 0, 129));
             return lbl;
         }
     }
 
     public GameGUI() throws IOException {
-        setContentPane(contentPane);
-        // Установить панель, которую надо отображать
-        setTitle("Goldman");
-        // Задаёт текст заголовка окна
-        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-        // Устанавливает отсутствие действия при нажатии на крестик окна
-        setResizable(false);
-        // Запрещает изменять размер окна
-        setLocationRelativeTo(null);
-        // Устанавливает положение окна по центру экрана
+
+        setContentPane(contentPane);// Установить панель, которую надо отображать
+        setTitle("Goldman");// Задаёт текст заголовка окна
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);// Устанавливает отсутствие действия при нажатии на крестик окна
+        setResizable(false);                 // Запрещает изменять размер окна
+        setLocationRelativeTo(null);         // Устанавливает положение окна по центру экрана
 
 
         game_quit.addActionListener(e -> GuiHandler.getInstance().displayMainMenu(this));
         ImageRenderer renderer = new ImageRenderer();
-        Enumeration <TableColumn> gameAreaColumns = game_area.getColumnModel().getColumns();
-        while (gameAreaColumns.hasMoreElements()){
+        Enumeration<TableColumn> gameAreaColumns = game_area.getColumnModel().getColumns();
+        while (gameAreaColumns.hasMoreElements()) {
             TableColumn areaColumn = gameAreaColumns.nextElement();
             areaColumn.setPreferredWidth(20);
             areaColumn.setCellRenderer(renderer);
@@ -59,14 +56,13 @@ public class GameGUI extends JFrame {
         DefaultTableModel tModel = (DefaultTableModel) game_area.getModel();
         DrawLevel.drawLevel(tModel);
 
-        pack();
-        // Устанавливает размер окна достаточный для всех компонентов
+        pack();                  // Устанавливает размер окна достаточный для всех компонентов
     }
 
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
-        game_area = new JTable(12 ,11);
+        game_area = new JTable(12, 11);
         game_area.setCellSelectionEnabled(false);
         game_area.setRowSelectionAllowed(false);
         game_area.setCellSelectionEnabled(false);

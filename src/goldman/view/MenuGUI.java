@@ -15,11 +15,10 @@ public class MenuGUI extends JFrame {
     private JButton button_records;
 
 
-
     /**
      * Параметры JButton заданы в одноименном файле с расширением .form
      * IDEA создала его сама, и дизайн рисовался через Swing Gui editor.
-     * */
+     */
 
     public MenuGUI() {
         setContentPane(contentPane);             // Установить панель, которую надо отображать
@@ -38,12 +37,6 @@ public class MenuGUI extends JFrame {
             }
         });
     }
-
-    /**
-    * Обращаем внимание на то, что в IDEA, параметры окна вводить отдельным методом
-     * не обязательно, все нужные настройки можно прописать в конструкторе.
-    * */
-
 
 
 

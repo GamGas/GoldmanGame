@@ -8,17 +8,19 @@ public class Map {
     private Coordinate[][] gameArea = null;
 
 
-    private Map(){}
-    public static synchronized Map getInstance(){
-        if(INSTANCE == null) {
+    private Map() {
+    }
+
+    public static synchronized Map getInstance() {
+        if (INSTANCE == null) {
             INSTANCE = new Map();
             return INSTANCE;
-        }else {
+        } else {
             return INSTANCE;
         }
     }
 
-    public boolean parseMap(File fileToParse){
+    public boolean parseMap(File fileToParse) {
         return false;
         //Этот метод будет парсить карту из файла, и инициализирует gameArea. Вернёт True
         //Если gameArea уже задана, вернёт False

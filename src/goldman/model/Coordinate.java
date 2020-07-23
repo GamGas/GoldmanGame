@@ -6,15 +6,15 @@ public class Coordinate {
 
     private Item item;
 
-    public Coordinate(Item item){
+    public Coordinate(Item item) {
         this.item = item;
     }
 
-    public Icon getIcon(){
+    public Icon getIcon() {
         return item.itemIcon;
     }
 
-    public ItemTypes getType(){
+    public ItemTypes getType() {
         return item.itemType;
     }
 
@@ -28,6 +28,6 @@ public class Coordinate {
 
     @Override
     public String toString() {
-        return ""+item+"," ;
+        return "" + item + ",";
     }
 }

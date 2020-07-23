@@ -2,6 +2,8 @@ package goldman.controller;
 
 import goldman.model.*;
 
+import java.util.Objects;
+
 //Фабрика проверена. Работает. Наверное надо будет сделать её синглтоном
 
 public class ItemFactory {
@@ -9,55 +11,37 @@ public class ItemFactory {
 
     private static ItemFactory INSTANCE = null;
 
-    private ItemFactory(){
+    private ItemFactory() {
     }
 
-    public static synchronized ItemFactory getInstance(){
-        if(INSTANCE == null){
+    public static synchronized ItemFactory getInstance() {
+        if (INSTANCE == null) {
             INSTANCE = new ItemFactory();
             return INSTANCE;
-        }else {
+        } else {
             return INSTANCE;
         }
     }
 
-    public Item getItem(ItemTypes type){
-        switch (type){
+    public Item getItem(ItemTypes type) {
+        switch (type) {
             case EXIT -> {
-                if(exit == null){
-                    return new Exit();
-                }
-                return exit;
+                return Objects.requireNonNullElseGet(exit, Exit::new);
             }
             case WALL -> {
-                if(wall == null){
-                    return new Wall();
-                }
-                return wall;
+                return Objects.requireNonNullElseGet(wall, Wall::new);
             }
             case EMPTY -> {
-                if(empty == null){
-                    return new Empty();
-                }
-                return empty;
+                return Objects.requireNonNullElseGet(empty, Empty::new);
             }
             case ENEMY -> {
-                if(enemy == null){
-                    return new Enemy();
-                }
-                return enemy;
+                return Objects.requireNonNullElseGet(enemy, Enemy::new);
             }
             case PLAYER -> {
-                if(player == null){
-                    return new Player();
-                }
-                return player;
+                return Objects.requireNonNullElseGet(player, Player::new);
             }
             case TREASURE -> {
-                if(treasure == null){
-                    return new Treasure();
-                }
-                return treasure;
+                return Objects.requireNonNullElseGet(treasure, Treasure::new);
             }
             default -> {
                 return null;
